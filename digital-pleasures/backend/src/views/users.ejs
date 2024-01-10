@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="/img/Digital-Lips.svg">
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <h1> Cantidad de usuarios registrados: <%= user.length%></h1>
+
+            
+            <div class="base">
+                
+                <div class="holder">
+                    <div class="titulo">
+                        <div class="datos">
+                            <ul>
+                                <% user.forEach(user => { %>
+                                    <h1><%= user.nombre %> <%= user.apellido %></h1>
+                                    <li><div class="base"><h4><%= user.img %></h4></div></li>
+                                    <h4><a href="/user/<%= user.id %>/profile">Detalle del perfil</a></h4>
+                                <% }); %>
+                            </ul>
+                                <div class="imagen fotos" id="principal">
+                                    <img for="inputarchivo" src="/imgUser/<%= user.img %>">
+                                </div>
+                        </div>
+                    </div>
+        </main>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(77,67,77,1);
+-moz-box-shadow: 0px 0px 10px 0px rgba(77,67,77,1);
+box-shadow: 0px 0px 10px 0px rgba(77,67,77,1);
+border-radius: 38px 38px 38px 38px;
+-moz-border-radius: 38px 38px 38px 38px;
+-webkit-border-radius: 38px 38px 38px 38px;
+border: 0px solid #000000;
+}
+
+h1 {
+  text-align: center;
+}
+#iniciarsesion{
+    font-family: 'Kalam', cursive;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #F564A9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.options {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.options a {
+  margin-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.options a:last-child {
+  margin-right: 0;
+}
+
+.form-recordar{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+main{
+  margin: 120px 0px 120px 0px;
+}

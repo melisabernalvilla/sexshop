@@ -1,0 +1,149 @@
+* {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+ 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    padding-top: 10vw;
+}
+
+
+img {
+    display: flex;
+    width: 50vw;
+  }
+
+main h1{
+
+    text-align: center;
+    color: black;
+    transition: 500ms;
+    text-shadow: 1px 2px 0px rgb(203, 199, 199);
+    font-family: 'Kalam';
+    display: inline;
+    font-size: 36px;
+    width: 90vw;
+    margin-top: 8vw;
+}
+
+  main h1:hover{
+    transform: scale(1.1);
+    color: #ff299c;
+    max-width: 100%;
+  }
+
+  main h4 {
+    padding-top: 10vw;
+    width: 85%;
+    text-align: center;
+    margin-right: 0vw;
+    margin-bottom: 7vw;
+}
+ 
+
+  button{
+    height: 12vw;
+    width: 60vw;
+    border-radius: 15px;
+    background-color: #ff299c;
+    color: white;
+    font-size: 16px;
+    transition: 300ms;
+  }
+
+
+@media (min-width: 550px) {
+
+    main {
+        padding-top: 10vw;
+    }
+
+    img {
+        width: 30vw;
+      }
+
+      main h1{
+        font-size: 48px;
+        margin-top: 7vw;
+    }
+    main h4{
+        padding-top: 5vw;
+        margin-bottom: 10vw;
+        font-size: 18px;
+    }
+
+    button {
+        height: 8vw;
+        width: 50vw;
+        border-radius: 20px;
+        font-size: 18px;    
+    }
+}
+
+@media (min-width: 769px) {
+
+    main {
+        padding-top: 5vw;
+    }
+
+    img {
+        width: 25vw;
+      }
+
+      main h1{
+        font-size: 48px;
+        margin-top: 3vw;
+    }
+    main h4{
+        padding-top: 2vw;
+        font-size: 24px;
+        margin-bottom: 5vw;
+    }
+
+    button {
+        height: 6vw;
+        width: 40vw;
+        border-radius: 25px;
+        font-size: 22px;    
+    }
+
+}
+
+@media (min-width: 1280px) {
+
+    main {
+        padding-top: 4vw;
+    }
+
+    img {
+        width: 10vw;
+      }
+
+      main h1{
+        font-size: 72px;
+        margin-top: 3vw;
+    }
+    main h4{
+        padding-top: 2vw;
+        font-size: 36px;
+        margin-bottom: 5vw;
+    }
+
+    button {
+        height: 4vw;
+        width: 20vw;
+        border-radius: 25px;
+        font-size: 22px;    
+    }
+
+}
+

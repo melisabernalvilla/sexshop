@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="/img/Digital-Lips.svg">
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <h1> Cantidad total de productos: <%= product.length%></h1>
+
+       
+            <div class="base">
+                <ul>
+                    <% product.forEach(product => { %>
+                      <li><div class="base"><h4><%= product.titulo %> </h4><br> 
+                      <h4><%= product.img %></h4></div></li>
+                      <h4><a href="/products/<%= product.id %>/detail">Detalle del producto</a></h4>
+                    <% }); %>
+                  </ul>
+                    </div>
+
+            </div>
+            </div>
+
+        </main>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

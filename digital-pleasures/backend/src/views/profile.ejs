@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="/img/Digital-Lips.svg">
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <h1>
+                <%= user.nombre %>
+                    <%= user.apellido %>
+            </h1>
+            <div class="base">
+
+                <div class="holder">
+                    <div class="titulo">
+                        <div class="datos">
+                            <h3>Datos del perfil:</h3><br>
+                            <h4>Usuario: <%= user.nombre %>
+                                    <%= user.apellido %>
+                            </h4>
+                            <h4><b>Nacionalidad: </b>
+                                <%= user.paisNacimiento %>
+                            </h4>
+                            <h4><b>Fecha de Nacimiento: </b>
+                                <%= user.fechaNacimiento %>
+                            </h4>
+                            <% if (isAdmin) { %>
+                                <h4> El usuario es Administrador</h4>
+                                <a href="http://localhost:3000"> <h4>Accede al Dashboard</h4></a>
+                            <% } %>
+                        </div>
+
+                        <div class="imagen fotos" id="principal">
+                            <img for="inputarchivo" src="/imgUser/<%= user.img %>">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <a href="/"> <button id="sumar" class="contenedor3">Volver al inicio</button></a>
+                <a href="/user/<%= user.id %>/editProfile"> <button type="reset" id="default" value="borrar"
+                        class="contenedor3">Editar Perfil</button></a>
+
+                <a href="/user/logout"> <button type="reset" id="sumar" value="borrar" class="contenedor3">Cerrar
+                        Sesion</button></a>
+
+            </div>
+            </div>
+
+        </main>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

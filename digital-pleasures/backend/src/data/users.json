@@ -1,0 +1,80 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "juan",
+        "apellido": "perez",
+        "fechaNacimiento": "13-03-1999",
+        "paisNacimiento": "argentina",
+        "email": "juanperez@gmial.com",
+        "password": "juanperez123",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 2,
+        "nombre": "carlos",
+        "apellido": "martinez",
+        "fechaNacimiento": "26-08-1988",
+        "paisNacimiento": "mexico",
+        "email": "carlosmar@gmail.com",
+        "password": "carlos12",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 3,
+        "nombre": "agustina",
+        "apellido": "lopez",
+        "fechaNacimiento": "12-11-2001",
+        "paisNacimiento": "peru",
+        "email": "aguslo2@gmial.com",
+        "password": "aguslopez1234",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 4,
+        "nombre": "carla",
+        "apellido": "rodriguez",
+        "fechaNacimiento": "26-01-1980",
+        "paisNacimiento": "colombia",
+        "email": "rodriguezcar@gmail.com",
+        "password": "123456",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 5,
+        "nombre": "rodrigo",
+        "apellido": "sosa",
+        "fechaNacimiento": "2001-08-06",
+        "paisNacimiento": "venezuela",
+        "email": "rodrigososarm12@gmail.com",
+        "password": "12rodrigo123",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 6,
+        "nombre": "ignacio",
+        "apellido": "lopez",
+        "fechaNacimiento": "1995-12-01",
+        "paisNacimiento": "chile",
+        "email": "nacholopez@gmail.com",
+        "password": "nacho12390",
+        "admin": false,
+        "img": ""
+    },
+    {
+        "id": 7,
+        "nombre": "Manu",
+        "apellido": "Cohete",
+        "fechaNacimiento": "1987-03-12",
+        "paisNacimiento": "Frenchia",
+        "email": "manucohete@hotmail.com",
+        "password": "false",
+        "admin": true,
+        "img": "1693971672751-descarga.jpg"
+    }
+]

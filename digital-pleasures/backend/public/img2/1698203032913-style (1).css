@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #ebebeb;
+}
+
+main {
+    width: 90vw;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+
+/* Barra de navegacion */
+
+header {
+    display: inline-block;
+    background-color: #EAC926;
+    width: 100vw;
+}
+
+.first-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 45%;
+    margin: 0;
+}
+
+.search {
+    width: 45%;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search input {
+    width: 90%;
+    border: none;
+}
+
+.search button {
+    border: none;
+    background-color: white;
+}
+
+.first-nav p {
+    margin: 10px 0;
+}
+
+nav {
+    margin: 15px;
+}
+
+.burger-menu {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.site,
+.navbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.burger-menu i {
+    font-size: 20px;
+    background-color: #03264C;
+    color: #ebebeb;
+    padding: 5px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.img-banner {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 4px;
+}
+
+header p {
+    text-align: center;
+}
+
+/* main de la pagina */
+
+
+main .section-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.titulares {
+    font-size: 24px;
+    width: 99%;
+    margin-bottom: 10px;
+}
+
+article img {
+    width: 100%;
+}
+
+.precio {
+    font-size: 18px;
+    width: 29%;
+}
+
+.descuento {
+    width: 69%;
+    text-align: center;
+    color: #39b54a;
+}
+
+.descuento,
+.descripcion {
+    font-size: 16px;
+}
+
+.descripcion {
+    display: none;
+}
+
+
+.article-box {
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.description-product {
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.description-specific {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/*icono*/
+.description-product {
+    position: relative;
+}
+
+.camion {
+    display: block;
+    position: absolute;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 20px;
+    top: -15px;
+    transition-duration: 1500ms;
+}
+/*--main END--*/
+
+/*--LOGIN START*/
+
+.login div { 
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-bottom: 2%;
+    margin-top: 5%;
+}
+
+.input-text {
+    width: 100%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #ebebeb;
+    display: flex;
+    justify-content: center;       
+    border: none;  
+    flex-wrap: wrap;
+}
+.enviar {
+    margin-left: 1%;
+    margin-bottom: 5%;    
+    border-color: #ebebeb;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.enviar input {
+    background-color:#165597;
+    height: 30px;
+    width: 50%;
+    border: none;
+    color: white;
+    border-radius: 5px;    
+}
+
+.input-text input{
+    width:60%;
+    height: 40px;
+}
+.input-text span{
+    width:60%;
+}
+
+
+.enviar input:hover {
+    background-color: #0022AA;
+}
+
+
+
+/*--login END--*/
+/* footer */
+
+footer section {
+    text-align: center;
+}
+
+footer i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #EAC926;
+}
+
+/*--HOVER--*/
+
+article:hover .descripcion {
+    display: block
+}
+
+article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.camion:hover {
+    transform: rotate(-90deg);
+}
+
+section i:hover{
+    color:#0022AA;
+}
+/*--media queries--*/
+
+@media (min-width: 361px) {
+    *{
+        font-size: 16px;
+    }
+    .site,
+    .navbar {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    article {
+        width: 47%;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .search {
+        width: 30%;
+    }
+
+    .first-nav p {
+        width: 30%;
+    }
+
+    .second-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .second-nav .navbar {
+        width: 44vw;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+}
+
+@media (min-width: 769px) {
+    article {
+        width: 24%;
+    }
+
+    .box-footer{
+        width: 98%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 10px 0;
+    }
+
+    .box-footer section{
+        width: 31%;
+    }
+}

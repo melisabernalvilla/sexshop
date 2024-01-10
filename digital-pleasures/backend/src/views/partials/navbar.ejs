@@ -1,0 +1,30 @@
+
+<header>
+    <nav>
+        <div id="N1">
+            <a href="/"> <img src="/img/Digital-Lips.svg" id="logo"> </a>  
+            <form action="/search" method="get" id="searchForm" class="search-form">
+                <input type="search" name="q" placeholder="Buscar..." id="busqueda">
+                <i class="fa-solid fa-magnifying-glass" style="color: #000000;" onclick="document.getElementById('searchForm').submit();"></i>
+            </form>
+        </div>
+        <div id="N2">
+            <div class="logoholder">
+                <a href="/products/cart">    <i class="fa-solid fa-cart-shopping links" style="color: #050609;"></i>
+                    
+            </div>
+            <div class="logoholder">  
+
+                <% if (locals.user) { %>
+                    <a href="/" class="fa-solid fa-user links" style="color: #050609;"></a>
+                <%  } else { %>
+                    <a href="/user/login">
+                        <i class="fa-solid fa-user links" style="color: #050609;"></i>
+                    </a>
+                <% } %>
+            </div>
+            
+        </div>
+    </nav>
+  <div style="height: 120px;"></div>
+</header>

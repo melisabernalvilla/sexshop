@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Kalam:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body{
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-between;
+}
+header {
+    background-color: #F564A9;
+    height: 120px;
+    display: flex;
+    position: fixed;
+    width: 100vw;
+}
+
+main{
+    margin-top: 120px;
+}
+
+
+#N1 {
+    display: flex;
+    width: 55%;
+    height: 100%;
+}
+
+#N2 {
+    display: flex;
+    width: 45%;
+    height: 100%;
+    flex-direction: row-reverse;
+    flex-wrap:wrap ;
+}
+
+#logo {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    margin: 20px;
+    margin-left: 10vw;
+}
+
+#busqueda {
+    width: 35vw;
+    height: 50%;
+    border-radius: 35px;
+    padding: 15px;
+    font-size: 16px;
+    display: none;
+    margin: 30px;
+    margin-left: 25%;
+}
+
+
+.links {
+    font-size: 25px;
+
+}
+
+.logoholder {
+
+    border-radius: 50%;
+    border: solid 2px #050609;
+    width: 50px;
+    height: 50px;
+    margin: 35px 10% 35px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+footer {
+    background-color: #050609;
+    height: 400px;
+    text-align: center;
+    color: #FCFFFC;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#seguinos {
+    padding-top: 45px;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Kalam', cursive;
+    padding: 20px;
+    font-size: 40px;
+    margin: 0px;
+}
+
+.redes {
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px;
+    margin-top: 0px;
+}
+
+#mapa {
+    width: 85%;
+    padding-bottom: 45px;
+}
+
+footer p {
+    font-size: 18px;
+    padding: 0 45px 0 45px;
+}
+
+.slide img {
+  width: 100%;
+}
+
+/*index start*/
+
+h2 {
+  border: 2px solid white;
+  width: 100%;
+  font-family: "Kalam", cursive;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #ff299c;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.imagen-ofertas {
+  width: 100%;
+  height: min-content;
+  border-radius: 10px;
+}
+
+ .products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.items-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 25vw;
+  margin: 10px;
+  color: #f564a9;
+  margin-bottom: 10px;
+  border: 1px solid #f564a9;
+  border-radius: 10px;
+  box-shadow: #f564a9 2px 2px;
+}
+.items-product:hover {
+  -webkit-box-shadow: 0px 0px 75px -7px rgba(255,41,156,1);
+-moz-box-shadow: 0px 0px 75px -7px rgba(255,41,156,1);
+box-shadow: 0px 0px 75px -7px rgba(255,41,156,1);
+transition: 2s;
+
+}
+.description-product{
+  text-align: center;
+  color:#050609;
+  transition: 2s;
+}
+
+.CartBtn {
+  width: 140px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background-color: #F564A9;
+  transition: 2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: .5s;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+}
+
+.IconContainer {
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .5s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(17, 17, 17);
+  transition-duration: .5s;
+  font-size: 1.04em;
+  font-weight: 600;
+}
+
+
+
+/*index end*/
+
+@media (min-width: 480px) {
+  .redes {
+    margin: 4%;
+    height: 15%;
+  }
+
+  footer p {
+    font-size: 16px;
+    padding: 0 20% 0 20%;
+  }
+
+  #mapa {
+    width: auto;
+    height: 65%;
+  }
+  button {
+    width: fit-content;
+    font-size: large;
+  }
+  /*index start*/
+  .seccion-home {
+    width: 100%;
+    background-color: #FCFFFC;
+  }
+   .imagen-ofertas {
+    max-width: max-content;
+    margin-bottom: 30px;
+  }
+ 
+  .description-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+  }
+
+  /*index end*/
+}
+
+@media (max-width: 400px) {
+  #N1 {
+      display: flex;
+      width: 75%;
+  }
+  #N2 {
+      width: 25%;
+      display: flex;
+  }
+  #busqueda{
+      display: flex;
+  }
+  footer{
+      display: flex;
+      flex-direction: row;
+  }
+  footer p {
+      font-size: 16px;
+      padding: 0 10% 0 10%;
+  }
+  .pie{
+      width: 33%;
+  }
+  .redes{
+      margin: 4%;
+      height: 6vw;
+  }
+  #mapa {
+      width: 75%;
+      height: auto;
+  }
+  /*index start*/
+  .description-product{
+    align-content: space-between;
+  }
+
+  button {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 769px) {
+    #N1 {
+        display: flex;
+        width: 75%;
+        justify-content: space-around;
+    }
+    #N2 {
+        width: 25%;
+        display: flex;
+    }
+    #busqueda{
+        display: flex;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
+    footer p {
+        font-size: 16px;
+        padding: 0 10% 0 10%;
+    }
+    .pie{
+        width: 33%;
+    }
+    .redes{
+        margin: 4%;
+        height: 6vw;
+    }
+    #mapa {
+        width: 75%;
+        height: auto;
+    }
+    /*index start*/
+    .description-product{
+      align-content: space-between;
+    }
+
+    button {
+      font-size: larger;
+    }
+    /*index end*/
+}
+@media (min-width: 1280px) {
+    .redes{
+        margin: 4%;
+        height: 6vw;
+    }
+    footer p {
+        font-size: 16px;
+        padding: 0 20% 0 20%;
+    }
+    #mapa {
+        width: auto;
+        height: 20vw;
+    }
+}

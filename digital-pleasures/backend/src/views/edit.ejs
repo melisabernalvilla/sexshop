@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carga.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="/img/Digital-Lips.svg">
+    <script src="/js/create.js"></script> 
+
+    <title>Editar <%= product.titulo %></title>
+
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <h1>Modificar Producto</h1>
+            <div class="base">
+                <form action="/products/<%= product.id %>/update?_method=PUT" method="post"
+                    enctype="multipart/form-data" id="formulario">
+                    <div class="holder">
+                        <h4>Indicá producto y características principales</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+                        <input type="text" id="nombre" value="<%= product.titulo %>" class="contenedor" name="titulo"
+                            >
+
+                    </div>
+                    <div class="holder">
+                        <h4>Descripción</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+
+                        <input type="text" id="descripción" value="<%= product.descripcion %>" class="contenedor" name="descripcion">
+                    </div>
+
+                    <div class="holder">
+                        <h4>Precio del producto</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+
+                        <input type="text" id="precio" value="<%= product.precio %>" class="contenedor" name="precio"
+                            >
+                    </div>
+                    <div class="holder">
+                        <h4>Stock del producto</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+                        <input type="text" id="stock" value="<%= product.stock %>" class="contenedor" name="stock"
+                            >
+                    </div>
+                    <div class="categorias">
+                        <h4>Agregar categorías:</h4>
+                        <label><input type="checkbox" id="cbox1" value="Juguetes" name="cbox1"> Juguetes</label>
+                        <label><input type="checkbox" id="cbox1" value="Lubricantes" name="cbox2"> Lubricantes</label>
+                        <label><input type="checkbox" id="cbox1" value="Lencería" name="cbox3"> Lencería</label>
+                        <label><input type="checkbox" id="cbox1" value="Fetiche" name="cbox4"> Fetiche</label>
+                        <label><input type="checkbox" id="cbox1" value="Diversión erótica" name="cbox5"> Diversión
+                            erótica</label>
+                    </div>
+                    <br>
+                    <h4>Modificar fotos del producto</h4>
+                    <div class="fotos">
+                        <div class="imagen" id="principal">
+                            <img src="/img/blank.png">
+                            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                        </div>
+                        <div class="secundaria">
+
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <p id='errorNombre' style="color:palevioletred;"></p>
+                    <input type="file" id="inputarchivo" name="img" style="display: none;" ><br>
+                    <label for="inputarchivo" id="seleccionar">Seleccior archivos</label>
+
+                    <div class="holder">
+                        <h4>Fecha de creación</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+                        <input type="date" id="fecha" class="contenedor" name="fecha" >
+                    </div>
+                    <div id="declaro">
+
+
+
+                    </div>
+                    <input type="submit" id="sumar" value="Guardar Cambios" class="contenedor3">
+                    </p>
+                </form>
+                <a href=""> <button type="reset" id="default" value="borrar" class="contenedor3">Por Defecto</button>
+                </a>
+                <form action="/products/<%= product.id %>/delete?_method=DELETE" method="post" id="deleteForm">
+                    <input type="submit" id="borrar" value="Eliminar" class="contenedor3"onclick="confirmDelete()">
+                    <script>
+                        function confirmDelete() {
+                            const confirmed = confirm("¿Estás seguro de que deseas eliminar este producto?");
+                            if (confirmed) {
+                                const now = new Date();
+                                const expirationDate = now.toUTCString();
+                                document.cookie = `email=; expires=${expirationDate}; path=/;`;
+                                document.getElementById("deleteForm").submit();
+                            } else {
+                                event.preventDefault();
+                        } 
+                        }
+                        </script>
+                </form>
+            </div>
+
+        </main>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

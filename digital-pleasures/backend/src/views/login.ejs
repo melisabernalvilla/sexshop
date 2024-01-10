@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/login.css" >
+  <link rel="stylesheet" href="/css/styles.css" >
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />  
+  <link rel="icon" href="/img/Digital-Lips.svg">
+  <script src="../../public/js/login.js"></script>
+
+  <title>Iniciar sesión</title>
+</head>
+<body>
+  <%- include('./partials/navbar.ejs'); %>
+
+<main>
+
+
+  <div class="container">
+    <h1 id="iniciarsesion">Iniciar sesión</h1>
+    <form action="/user/login" method="post">
+      <div class="form-group">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" id="username" name="email" placeholder="Ingrese su nombre de usuario">
+        <% if (locals.error && error.email) { %>
+          <p style="color: red"><%= error.email %></p>
+      <% } %>
+        <p style="color: palevioletred;"></p>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+        <% if (locals.error && error.password) { %>
+          <p style="color: red"><%= error.password %></p>
+      <% } %>
+      </div>
+      <div class="form-recordar">
+      <label for="recordar">Recordarme</label>
+      <input type="checkbox" id="remember" name="remember">
+      </div>
+      <input type="submit" class="boton" value="Iniciar sesión" class="contenedor3">
+    </form>
+    <div class="options">
+      <a href="/user/register">Registrarse</a>
+      <a href="/error404" onclick="confirmRecovery()">¿Olvidó su contraseña?</a>
+    </div>
+  </div>
+</main>
+<%- include('./partials/footer.ejs'); %>
+
+</body>
+</html>
+

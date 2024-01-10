@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= product.product %> - Digital Pleasures
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/detail.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/img/Digital-Lips.svg">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+        defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="../public/imgenes-header-footer/Digital-Lips.svg">
+
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <article id="compra">
+
+                <div class="producto">
+                    <div class="productoDetallado">
+                        <h1>
+                            <%= product.titulo %>
+                        </h1>
+                        <img class="img" src="/img2/<%= product.img %>">
+                    </div>
+                    <br>
+                    <div class="costado">
+                        <h1>$ <%= product.precio %>
+                        </h1>
+                        <h2>Características del producto</h2>
+                        <h3>
+                            <%= product.descripcion %>
+                        </h3>
+                        <br>
+                        <div class="boton">
+                            <button class="boton1">CONTINUAR COMPRA</button>
+                            <br>
+                            <button class="boton2"><a href="/products/cart">AGREGAR AL CARRITO</button></a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <div class="container">
+                    <h1>Productos relacionados</h1>
+                    <div class="container1">
+                        <% for (let i = 0; i < productosSeleccionados.length; i++) { %>
+                            <div class="carta<%= i + 1 %>">
+                                <p><a href="/products/<%= productosSeleccionados[i].id %>/detail"><img src="/img2/<%= productosSeleccionados[i].img %>"></a></p>
+                                <h3><%= productosSeleccionados[i].titulo %> <h3>
+
+                               
+                            </div>
+                            <br>
+                        <% } %>
+                    </div>
+                </div>
+                </div>
+            </article>
+
+        </main>
+
+        <% if (isAdmin) { %>
+            <%- include('./partials/addProduct.ejs'); %>
+            <%- include('./partials/editProduct.ejs'); %>
+          <% } %>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

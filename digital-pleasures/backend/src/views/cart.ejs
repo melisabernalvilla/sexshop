@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <title>Carrito de Compras</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar.ejs'); %>
+    <main>
+        <div class="Carrito-box">
+            <h1>Mi Compra</h1>
+            <section class="product-add">
+                <article>
+                    <img class="imagen-ofertas" src="/img2/conjunto brenda.webp" alt="lenceria">
+                    <div class="product-detail">
+                        <h3>Conjunto Brenda</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <div class="box-num">
+                            <button><i class="fa fa-minus" aria-hidden="true"></i></button>
+                            <input type="number" value="1">
+                            <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                        </div>
+                        <p class="precio-cantidad">$7800</p>
+
+                    </div>
+                    <button><i class="fa fa-trash" aria-hidden="true"></i></button>
+                    
+                </article>
+            </section>
+            <section class="el-section-especial">
+                <div class="box-envio">
+                    <div class="box-1">
+                        <div class="box-camion">
+                            <i class="fa fa-truck" aria-hidden="true"></i>
+                        </div>
+                        <p>Introduce el codigo postal y calcula el precio</p>
+                    </div>
+                    <div class="box-2">
+                        <div>
+                            <input type="text" placeholder="Introduzca codigo postal">
+                            <button>calcular</button>
+                        </div>
+                        <h3>$1.500</h3>
+                    </div>
+                    <div class="total">
+                        <p class="total-p"><b>TOTAL</b></p>
+                        <p><b>$9.300</b></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div style="height: 60px;"></div>
+    </main>
+
+
+    <%- include('./partials/footer.ejs'); %>
+</body>
+
+</html>

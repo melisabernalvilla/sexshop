@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carga.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="/img/Digital-Lips.svg">
+    <!-- <script src="/js/create.js"></script> -->
+
+    <title>Agregar un Producto</title>
+
+</head>
+
+<body>
+
+    <%- include('./partials/navbar.ejs'); %>
+
+
+        <main>
+
+            <form action="/products/create" id="formulario" method="post" enctype="multipart/form-data">
+                <h1>Agregar un producto</h1>
+                <div class="base">
+
+                    <div class="holder">
+                        <h4>Indicá producto y características principales</h4>
+                        <p id='errorNombre' style="color:palevioletred;"></p>
+                        <input type="text" id="nombre" placeholder="Ej: Juguete de cuentas para masaje de diamante metal" class="contenedor"
+                            name="titulo">
+                            <% if (locals.errors && errors.titulo) { %>
+                                <p style="color: red"><%= errors.titulo %></p>
+                            <% } %>
+                    </div>
+                    <div class="holder">
+                        <h4>Descripción</h4>
+                        <p id='errorDescripcion' style="color:palevioletred;"></p>
+                        <input type="text" id="descripción" placeholder="Ej: Lorem" class="contenedor"
+                            name="descripcion">
+                            <% if (locals.errors && errors.descripcion) { %>
+                                <p style="color: red"><%= errors.descripcion %></p>
+                            <% } %>
+                    </div>
+                    <div class="holder">
+                        <h4>Precio del producto</h4>
+                        <p id='errorPrecio' style="color:palevioletred;"></p>
+                        <input type="number" id="precio" placeholder="Ej: $20.000" class="contenedor" name="precio"
+                            inputmode="numeric">
+                            <% if (locals.errors && errors.precio) { %>
+                                <p style="color: red"><%= errors.precio %></p>
+                            <% } %>
+                    </div>
+                    <div class="holder">
+                        <h4>Stock del producto</h4>
+                        <p id='errorStock' style="color:palevioletred;"></p>
+                        <input type="number" id="stock" placeholder="Ej: 25" class="contenedor" name="stock">
+                    </div>
+                    <div class="holder">
+                        <div class="categorias">
+                            <h4>Agregar categoría:</h4>
+                            <p id='errorCategorias' style="color:palevioletred;" name="categorias"></p>
+
+                            <label><input type="checkbox" id="cbox" value="Juguetes" name="cbox1"> Juguetes</label>
+                            <label><input type="checkbox" id="cbox" value="Lubricantes" name="cbox2">Lubricantes</label>
+                            <label><input type="checkbox" id="cbox" value="Lencería" name="cbox3"> Lencería</label>
+                            <label><input type="checkbox" id="cbox" value="Fetiche" name="cbox4"> Fetiche</label>
+                            <label><input type="checkbox" id="cbox" value="Diversión erótica" name="cbox5"> Diversión
+                                erótica</label>
+                        </div>
+                    </div>
+                    <br>
+                    <h4>Cargar fotos del producto</h4>
+                    <div class="fotos">
+                        <div class="imagen" id="principal">
+                            <img src="/img/blank.png">
+                            <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                        </div>
+                        <div class="secundaria">
+
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                            <div class="imagen">
+                                <img src="/img/blank.png">
+                                <i class="fa-solid fa-trash" style="color: #000000;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p id='errorFotos' style="color:palevioletred;"></p>
+                    <input type="file" id="inputarchivo" name="img" style="display: none;">
+                    <% if (locals.errors && errors.img) { %>
+                        <p style="color: red"><%= errors.img %></p>
+                    <% } %>
+                    <br>
+                    <label for="inputarchivo" id="seleccionar">Seleccior archivos</label>
+                    <br>
+                    <div class="holder">
+                        <h4>Fecha de creación</h4>
+                        <p id='errorFecha' style="color:palevioletred;"></p>
+                        <input type="date" id="fecha" class="contenedor" name="fecha" min="1921-01-01">
+                        <% if (locals.errors && errors.fecha) { %>
+                            <p style="color: red"><%= errors.fecha %></p>
+                        <% } %>
+                    </div>
+                    <br>
+                    
+                    <p>
+                        <button type="submit" id="sumar" value="agregar" class="contenedor3">Agregar producto</button>
+                        <button type="reset" id="borrar" value="borrar" class="contenedor3">Borrar producto</button>
+                    </p>
+                </div>
+            </form>
+
+        </main>
+
+        <%- include('./partials/footer.ejs'); %>
+
+</body>
+
+</html>

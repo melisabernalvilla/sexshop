@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Kalam:wght@300;400;700&display=swap");
+
+* {
+    font-family: "Josefin Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px !important;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+}
+
+footer {
+    background-color: #ebebeb;
+    padding-top: 40px;
+}
+
+.base {
+    width: 85vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    background-color: #ebebeb;
+    padding: 20px 0px 10px;
+}
+
+
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+
+
+.categorias {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-left: 7%;
+    margin-bottom: 3px;
+}
+
+.categorias h4 {
+    margin-left: 0vw;
+}
+
+main h1 {
+    text-align: center;
+    color: black;
+    transition: 500ms;
+    text-shadow: 1px 2px 0px rgb(203, 199, 199);
+    font-family: 'Kalam';
+    margin-bottom: 30px;
+}
+
+
+main h4 {
+    width: fit-content;
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 0vw;
+    margin-bottom: 15px;
+}
+
+main .categorias label {
+    display: flex;
+    width: 40vw;
+    margin-right: 2vw;
+    margin-left: 5vw;
+    margin-bottom: 10px;
+}
+
+.categorias h4 {
+    margin-bottom: 25px;
+}
+
+.check {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.base label {
+    width: 80%;
+    margin-top: 5px;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    padding: 0;
+}
+
+.base h1 {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.base .pass {
+    margin-top: 15px;
+}
+
+.base button {
+    margin-top: -20px;
+    margin-left: 18vw;
+    border-radius: 7px;
+    height: 30px;
+}
+
+
+.contenedor {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    border: solid 3px #ebebeb;
+    padding-left: 10px;
+}
+
+.contenedor input[type="file"] {
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedor input[type="radio"] {
+    padding: 3px;
+    margin: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#declaro {
+    width: 85%;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+
+}
+
+
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sumar,
+#borrar,
+#default {
+    height: 30px;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #ff299c;
+    color: white;
+    transition: 500ms;
+    font-size: 16px;
+}
+
+#sumar:hover,
+#borrar:hover,
+#default:hover {
+    background-color: black;
+}
+
+
+a h4{
+    color: black;
+}
+
+
+.fotos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#principal {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#principal img {
+    border: solid 2px;
+    border-color: #ff299c;
+}
+
+.imagen {
+    width: 30%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+}
+
+.secundaria {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.fotos img {
+    width: 85%;
+}
+
+.fa-trash {
+    position: absolute;
+    right: 10%;
+    top: 2%;
+}
+
+#seleccionar {
+    background-color: #DDDDDD;
+    width: fit-content;
+    padding: 12px;
+    border-radius: 15px;
+    border: solid 1px #888888;
+}
+
+#seleccionar:hover {
+    background-color: #BBBBBB;
+}
+
+
+
+@media (min-width: 769px) {
+
+    .base {
+        width: 70vw;
+    }
+
+
+    .fotos {
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #principal {
+        width: 45%;
+    }
+
+    .secundaria {
+        width: 17%;
+        flex-direction: column;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+
+
+
+    .titulo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .datos {
+        width: 50%;
+    }
+
+    #sumar,
+    #borrar,
+    #default {
+        width: 30vw;
+        margin-left: 29vw;
+    }
+
+}
+
+
+@media (min-width: 1280px) {
+
+    .base {
+        width: 65vw;
+    }
+
+    #principal {
+        width: 35%;
+    }
+
+    .secundaria {
+        flex-direction: row;
+        width: 70%;
+    }
+
+    .datos {
+        width: 60%;
+    }
+
+    #sumar,
+    #borrar,
+    #default {
+        width: 17vw;
+        margin-left: 38vw;
+    }
+
+    .botones{
+        margin-bottom: 30px;
+    }
+
+}
